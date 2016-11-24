@@ -1,0 +1,54 @@
+
+/*
+    
+    +----------------+-----------------------------+
+    | n_chr_l        | new chromossomes list       |
+    +----------------+-----------------------------+
+    | chr_dad_l      | chromossome dad list        |
+    +----------------+-----------------------------+
+    | chr_dad_ofst_l | chromossome dad offset list |
+    +----------------+-----------------------------+
+    | chr_mom_l      | chromossome mom list        |
+    +----------------+-----------------------------+
+    | chr_mom_ofst_l | chromossome mom offset list |
+    +----------------+-----------------------------+
+ */
+
+/* ---------------------------------- */
+
+#define CHROMOSSOME_DAD_LIST [REPLACE_CHROMOSSOME_DAD_LIST]
+
+#define CHROMOSSOME_DAD_OFFSET_LIST [REPLACE_CHROMOSSOME_DAD_OFFSET_LIST]
+
+#define CHROMOSSOME_MOM_LIST [REPLACE_CHROMOSSOME_MOM_LIST]
+
+#define CHROMOSSOME_MOM_OFFSET_LIST [REPLACE_CHROMOSSOME_MOM_OFFSET_LIST]
+
+/* ---------------------------------- */
+
+__kernel void crossover
+(
+
+    __global int* n_chr_l
+
+)
+{
+
+    int chr_dad_l[]      = CHROMOSSOME_DAD_LIST ;
+    
+    int chr_dad_ofst_l[] = CHROMOSSOME_DAD_OFFSET_LIST ;
+    
+    int chr_mom_l[]      = CHROMOSSOME_MOM_LIST ;
+    
+    int chr_mom_ofst_l[] = CHROMOSSOME_MOM_OFFSET_LIST ;
+    
+    int base_line_index;    
+
+    base_line_index = get_global_id(0);
+
+    /* ----------------------------------------- */
+    
+    printf("---- begin crossover ---\n");
+    
+}
+
